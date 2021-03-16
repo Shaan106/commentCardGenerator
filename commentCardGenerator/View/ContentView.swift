@@ -26,18 +26,34 @@ struct ContentView: View {
                     }
                 }
                 Text("You have selected: \(selectedSubject)")
-
-                Slider(value: $happinessInSubject, in: 0...10)
-                    .padding()
-                Text("Happiness is \(happinessInSubject, specifier: "%.1f")")
                 
-                Slider(value: $effortInSubject, in: 0...10)
-                    .padding()
-                Text("Effort is \(effortInSubject, specifier: "%.1f")")
+                HStack {
+                    Text("Happiness is \(happinessInSubject, specifier: "%.1f")")
+                        .padding()
+                    Slider(value: $happinessInSubject, in: 0...3)
+                        .padding()
+                }
                 
-                Slider(value: $progressInSubject, in: 0...10)
+                HStack {
+                    Text("Effort is \(effortInSubject, specifier: "%.1f")")
+                        .padding()
+                    Slider(value: $effortInSubject, in: 0...3)
                     .padding()
-                Text("Progress: \(progressInSubject, specifier: "%.1f")")
+                }
+                
+                HStack {
+                    Text("Progress: \(progressInSubject, specifier: "%.1f")")
+                        .padding()
+                    Slider(value: $progressInSubject, in: 0...3)
+                        .padding()
+                }
+                Spacer()
+                    .frame(maxHeight: 75)
+                NavigationLink(destination: GenerateCommentView(comment: Comment(subjectInput: selectedSubject, happinessInput: happinessInSubject, effortInput: effortInSubject, progressInput: progressInSubject) )) {
+                                    Text("Do Something")
+                                }
+                Spacer()
+                    .frame(maxHeight: 75)
             }
             .navigationBarTitleDisplayMode(.large)
             .toolbar {
@@ -48,6 +64,7 @@ struct ContentView: View {
                 }
             }
             .font(.headline)
+            
         }
     }
 }
