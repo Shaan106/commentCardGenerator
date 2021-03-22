@@ -28,30 +28,35 @@ struct ContentView: View {
                 Text("You have selected: \(selectedSubject)")
                 
                 HStack {
-                    Text("Happiness is \(happinessInSubject, specifier: "%.1f")")
+                    Text("Happiness is \(happinessInSubject, specifier: "%1.0f")")
                         .padding()
                     Slider(value: $happinessInSubject, in: 0...3)
                         .padding()
                 }
                 
                 HStack {
-                    Text("Effort is \(effortInSubject, specifier: "%.1f")")
+                    Text("Effort is \(effortInSubject, specifier: "%1.0f         ")")
                         .padding()
                     Slider(value: $effortInSubject, in: 0...3)
-                    .padding()
+                        .padding()
                 }
                 
                 HStack {
-                    Text("Progress: \(progressInSubject, specifier: "%.1f")")
+                    Text("Progress: \(progressInSubject, specifier: "%1.0f      ")")
                         .padding()
                     Slider(value: $progressInSubject, in: 0...3)
                         .padding()
                 }
                 Spacer()
                     .frame(maxHeight: 75)
+                
                 NavigationLink(destination: GenerateCommentView(comment: Comment(subjectInput: selectedSubject, happinessInput: happinessInSubject, effortInput: effortInSubject, progressInput: progressInSubject) )) {
-                                    Text("Do Something")
+                        HStack  {
+                            Image(systemName: "pencil.and.outline")
+                            Text("Generate Comment")
+                        }
                                 }
+                
                 Spacer()
                     .frame(maxHeight: 75)
             }
