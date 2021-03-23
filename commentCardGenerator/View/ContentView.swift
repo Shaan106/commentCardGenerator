@@ -55,7 +55,7 @@ struct ContentView: View {
                             Image(systemName: "pencil.and.outline")
                             Text("Generate Comment")
                         }
-                                }
+                    }
                 
                 Spacer()
                     .frame(maxHeight: 75)

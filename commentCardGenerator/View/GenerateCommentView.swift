@@ -13,25 +13,38 @@ struct GenerateCommentView: View {
     var comment: Comment
     
     var body: some View {
-        VStack {
-            
-            Text(comment.generateComment())
-                .padding()
-                .frame(width: 350)
-            
-            Button(action: {
-                pasteboard.string = comment.generateComment()
-            }) {
-                HStack(spacing: 10) {
-                    Image(systemName: "doc.on.clipboard")
-                    Text("Copy Generated Comment")
+            VStack {
+                
+                Text(comment.generateComment())
+                    .padding()
+                    .frame(width: 350)
+                
+                VStack {
+                    Button(action: {
+                        pasteboard.string = comment.generateComment()
+                    }) {
+                        HStack(spacing: 10) {
+                            Image(systemName: "doc.on.clipboard")
+                            Text("Copy Generated Comment")
+                        }
+                    }
+                    .foregroundColor(Color.blue)
+                    .cornerRadius(.infinity)
+                    .padding()
+                    
+                    NavigationLink(destination: EditCommentView( comment : comment.generateComment() ) ) {
+                            HStack  {
+                                Image(systemName: "square.and.pencil")
+                                Text("Edit Comment")
+                            }
+                        }
+                    .padding()
                 }
+                
+                
+            
             }
-            .foregroundColor(Color.blue)
-            .cornerRadius(.infinity)
-        
-        }
-        
+            
     }
 }
 

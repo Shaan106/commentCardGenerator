@@ -15,6 +15,8 @@
 		7B02D85325FFB3C500EFEC8A /* commentCardGeneratorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B02D85225FFB3C500EFEC8A /* commentCardGeneratorUITests.swift */; };
 		CD5ACCE02600AEAF00B5AAB9 /* GenerateCommentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5ACCDF2600AEAF00B5AAB9 /* GenerateCommentView.swift */; };
 		CD5ACCE92600B22F00B5AAB9 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5ACCE82600B22F00B5AAB9 /* Comment.swift */; };
+		CD65B0DC2609E6D0009E2F76 /* EditCommentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD65B0DB2609E6D0009E2F76 /* EditCommentView.swift */; };
+		CD65B0E72609EF53009E2F76 /* SentimentAnalyser.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD65B0E62609EF53009E2F76 /* SentimentAnalyser.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		7B02D85425FFB3C500EFEC8A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CD5ACCDF2600AEAF00B5AAB9 /* GenerateCommentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenerateCommentView.swift; sourceTree = "<group>"; };
 		CD5ACCE82600B22F00B5AAB9 /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
+		CD65B0DB2609E6D0009E2F76 /* EditCommentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditCommentView.swift; sourceTree = "<group>"; };
+		CD65B0E62609EF53009E2F76 /* SentimentAnalyser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SentimentAnalyser.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +143,7 @@
 			isa = PBXGroup;
 			children = (
 				CD5ACCE82600B22F00B5AAB9 /* Comment.swift */,
+				CD65B0E62609EF53009E2F76 /* SentimentAnalyser.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -148,6 +153,7 @@
 			children = (
 				7B02D83725FFB3C400EFEC8A /* ContentView.swift */,
 				CD5ACCDF2600AEAF00B5AAB9 /* GenerateCommentView.swift */,
+				CD65B0DB2609E6D0009E2F76 /* EditCommentView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -282,8 +288,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				7B02D83825FFB3C400EFEC8A /* ContentView.swift in Sources */,
+				CD65B0DC2609E6D0009E2F76 /* EditCommentView.swift in Sources */,
 				CD5ACCE92600B22F00B5AAB9 /* Comment.swift in Sources */,
 				7B02D83625FFB3C400EFEC8A /* commentCardGeneratorApp.swift in Sources */,
+				CD65B0E72609EF53009E2F76 /* SentimentAnalyser.swift in Sources */,
 				CD5ACCE02600AEAF00B5AAB9 /* GenerateCommentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
