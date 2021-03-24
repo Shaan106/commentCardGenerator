@@ -24,4 +24,12 @@ class SentimentAnalyser  {
         return score
         
     }
+    
+    func maybeBetterAnalyser(input: String) -> String {
+        let tagger = NLTagger(tagSchemes: [.sentimentScore])
+        tagger.string = input
+        let (sentimentScoreTag, _) = tagger.tag(at: input.startIndex, unit: .paragraph, scheme: .sentimentScore)
+        let sentimentScore = sentimentScoreTag?.rawValue ?? "0"
+        return sentimentScore
+    }
 }

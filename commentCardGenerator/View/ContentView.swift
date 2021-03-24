@@ -56,6 +56,16 @@ struct ContentView: View {
                             Text("Generate Comment")
                         }
                     }
+                .padding()
+                
+                
+                NavigationLink(destination: EditCommentView(comment: "" )) {
+                        HStack  {
+                            Image(systemName: "doc.text.magnifyingglass")
+                            Text("Analyse Comment")
+                        }
+                    }
+                .padding()
                 
                 Spacer()
                     .frame(maxHeight: 75)

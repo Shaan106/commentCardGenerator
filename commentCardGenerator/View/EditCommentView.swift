@@ -22,11 +22,33 @@ struct EditCommentView: View {
                 }
             }
             .padding()
+
             
-            TextEditor(text: $comment)
-                .padding()
+            ZStack(alignment: .leading) {
+                
+                VStack {
+                    if comment.isEmpty {
+                            Text("hello this is the test of the placeholder text thing")
+                                .opacity(0.4)
+                                .padding(.top, 23)
+                                .padding(.leading, 23)
+                            Spacer()
+                        }
+                }
+                
+
+                
+                TextEditor(text: $comment)
+                    .opacity(comment.isEmpty ? 0.4 : 1)
+                    .padding()
+            }
             
-            Text( "\(SentimentAnalyser().analyse(input: comment))" )
+            
+            Text( "Sentiment analyser 1 score: \(SentimentAnalyser().analyse(input: comment))" )
+            
+            Text( "Sentiment analyser 2 score: \(SentimentAnalyser().maybeBetterAnalyser(input: comment))" )
+            
+            
         }
         .padding()
         
@@ -36,6 +58,6 @@ struct EditCommentView: View {
 
 struct EditCommentView_Previews: PreviewProvider {
     static var previews: some View {
-        EditCommentView(comment: "Test text")
+        EditCommentView(comment: "")
     }
 }

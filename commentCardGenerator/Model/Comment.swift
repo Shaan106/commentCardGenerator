@@ -17,12 +17,12 @@ class Comment {
     let happinessDict = [0: "I have not particularly enjoyed the divs so far",
                          1: "The divs have been going fine",
                          2: "I have enjoyed the divs so far this half",
-                         3: "The divs this half have been brilliant"]
+                         3: "The divs this half have been amazing"]
     
     let effortDict =    [0: "I feel as if I have to start putting a lot more effort in the subject",
                          1: "I feel as if I need to put in a bit more effort in divs",
                          2: "I feel as if I am putting in effort in divs",
-                         3: "I feel as if I have been putting a lot of effort in divs so far"]
+                         3: "I believe I have been putting a lot of effort in divs so far"]
     
     let progressDict =  [0: "poorly for me, I don't think I've made as much progress as I would have wanted to",
                          1: "well and I have learnt new things, although I think I could have learnt more",
